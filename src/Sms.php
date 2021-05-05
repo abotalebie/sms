@@ -13,7 +13,7 @@ class Sms
         $provider = config('sms.default');
         $config = config('sms.providers')[$provider];
         $class = "\Abotalebie\Sms\Providers\\" . $config['provider'];
-        $helper = new $class($provider['username'], $config['password'], $config['number']);
+        $helper = new $class($config['username'], $config['password'], $config['number']);
         $helper->send($recipients, $text);
     }
 }
