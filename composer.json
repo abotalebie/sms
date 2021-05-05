@@ -1,0 +1,31 @@
+{
+    "name": "abotalebie/sms",
+    "description": "laravel sms sender",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mostafa Aboutalebi",
+            "email": "m.abotalebie@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Abotalebie\\Sms\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Abotalebie\\Sms\\SmsServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "illuminate/support": "^8.40"
+    }
+}
