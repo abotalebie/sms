@@ -14,7 +14,7 @@ class Sms
         $config = config('sms.providers')[$provider];
         $class = "\Abotalebie\Sms\Providers\\" . $config['provider'];
 
-        $helper = $config['provider'] === 'ippanel'
+        $helper = $config['provider'] === 'IPPanel'
             ? new $class($config['api_key'], $config['number'])
             : new $class($config['username'], $config['password'], $config['number']);
 
