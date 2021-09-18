@@ -13,12 +13,18 @@ class IPPanelPattern
     public function __construct($pattern_code, $values = [])
     {
         $this->code = $pattern_code;
-        $this->values = $values;
+        $this->values = [];
+
+        if (count($values)) {
+            foreach ($values as $key => $value) {
+                $this->setValue($key, $value);
+            }
+        }
     }
 
     public function setValue($key, $value)
     {
-        $this->values[$key] = $value;
+        $this->values[$key] = (string) $value;
     }
 
     public function getCode()
