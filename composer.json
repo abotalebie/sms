@@ -23,7 +23,8 @@
     },
     "require": {
         "ext-curl": "*",
-        "ext-json": "*"
+        "ext-json": "*",
+        "ippanel/php-rest-sdk": "^1.0"
     },
     "require-dev": {
         "illuminate/support": "^8.40"

@@ -2,13 +2,12 @@
 
 return [
 
-    'default' => env('SMS_PROVIDER', 'max-sms'),
+    'default' => env('SMS_PROVIDER', 'ippanel'),
 
     'providers' => [
-        'max-sms' => [
-            'provider' => 'MaxSms',
-            'username' => env('SMS_USERNAME'),
-            'password' => env('SMS_PASSWORD'),
+        'ippanel' => [
+            'provider' => 'ippanel',
+            'api_key' => env('SMS_API_KEY'),
             'number' => env('SMS_NUMBER'),
         ]
     ]
